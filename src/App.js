@@ -5,8 +5,9 @@ function App() {
     <div>
       <h1>Today's voice:</h1>
       <div className="App">
+        {/* <Comment pic={random/url} color={} fontSize={} fontWeight={} headerJustify={} contentJustify={}/> */}
         <div className="comment-box">
-          <div className="comment-pic">.</div>
+          <div className="comment-pic">PIC</div>
           <div className="comment-article">
             <div className="comment-content-header">header</div>
             <div className="comment-content">content</div>
