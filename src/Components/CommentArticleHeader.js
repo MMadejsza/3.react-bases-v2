@@ -1,9 +1,17 @@
 import React from 'react';
 import "../CSS/CommentArticleHeader.css"
 
-const CommentArticleHeader = () => {
+const CommentArticleHeader = (props) => {
+    let divStyle = {
+        color: props.color,
+        fontSize: props.fontSize,
+        fontWeight: props.fontWeight,
+        textAlign: props.headerJustify,
+    }
     return (
-        <div></div>
+        <div className="comment-content-header" style={divStyle}>
+            Header
+        </div >
     )
 }
 export default CommentArticleHeader;

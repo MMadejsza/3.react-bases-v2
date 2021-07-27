@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
+import CommentPic from '../Components/CommentPic.js'
+import CommentArticle from '../Components/CommentArticle.js'
 import "../CSS/Comment.css"
+
 //czy tu można użyć takich skrótów np.?
 //const store = this.props.store;
 // const form = this.props.form;
@@ -17,17 +20,23 @@ class Comment extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            const { pic, color, fontSize, fontWeight, headerJustify, contentJustify } = this.props;
+            pic: this.props.pic, //czy tu musi być this?
+            picAlt: "Icon",
+            color: this.props.color,
+            fontSize: this.props.fontSize,
+            fontWeight: this.props.fontWeight,
+            headerJustify: this.props.headerJustify,
+            contentJustify: this.props.contentJustify,
         }
     }
 
-
-
     render() {
         return (
-            <div>
-                <CommentPic />
-                <CommentArticle />
+            <div className="comment-box">
+                <CommentPic pic={this.state.pic} alt={this.state.picAlt} />
+                <CommentArticle
+                    color={this.state.color} fontSize={this.state.fontSize} fontWeight={this.state.fontWeight} headerJustify={this.state.headerJustify} contentJustify={this.state.contentJustify}
+                />
             </div>
         )
     }

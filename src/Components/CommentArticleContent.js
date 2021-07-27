@@ -1,9 +1,17 @@
 import React from 'react';
 import "../CSS/CommentArticleContent.css"
 
-const CommentArticleContent = () => {
+const CommentArticleContent = (props) => {
+    let divStyle = {
+        color: props.color,
+        fontSize: props.fontSize,
+        fontWeight: props.fontWeight,
+        textAlign: props.contentJustify,
+    }
     return (
-        <div></div>
+        <div className="comment-content" style={divStyle}>
+            Content
+        </div >
     )
 }
 
