@@ -1,0 +1,11 @@
+.comment-box {
+    width: 60vw;
+    height: 15vh;
+    border: 1px solid black;
+    border-radius: 8px;
+    margin: 10px;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    align-content: center;
+}

@@ -1,0 +1,7 @@
+.comment-content {
+    border: 1px solid black;
+    border-radius: 8px;
+    margin: 5px;
+    padding: 0px 10px;
+    height: 60%;
+}
