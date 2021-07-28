@@ -20,6 +20,7 @@ class Comment extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            deleted: false,
             pic: this.props.pic, //czy tu musi być this?
             picAlt: "Icon",
             color: this.props.color,
@@ -30,16 +31,27 @@ class Comment extends Component {
         }
     }
 
+    deleteComment = () => {
+        console.log('clicked');
+        this.setState({
+            deleted: true
+        })
+    }
+
     render() {
-        return (
-            <div className="comment-box">
-                <CommentPic pic={this.state.pic} alt={this.state.picAlt} />
-                <CommentArticle
-                    color={this.state.color} fontSize={this.state.fontSize} fontWeight={this.state.fontWeight} headerJustify={this.state.headerJustify} contentJustify={this.state.contentJustify}
-                />
-            </div>
-        )
+        if (!this.state.deleted) {
+            return (
+                <div className="comment-box" onClick={this.deleteComment}>
+                    <CommentPic pic={this.state.pic} alt={this.state.picAlt} />
+                    <CommentArticle
+                        color={this.state.color} fontSize={this.state.fontSize} fontWeight={this.state.fontWeight} headerJustify={this.state.headerJustify} contentJustify={this.state.contentJustify}
+                    />
+                </div>
+
+            )
+        } return (" ")
     }
 }
+
 
 export default Comment;

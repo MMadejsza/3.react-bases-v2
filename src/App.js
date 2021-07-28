@@ -1,3 +1,4 @@
+import React, { Component } from 'react';
 import './App.css';
 import Comment from './Components/Comment.js';
 
@@ -9,6 +10,10 @@ function App() {
         {/* muszę ręcznie przeładować hosta bo inaczej nie widać zmian w propsach. w reszcie rzeczy widać 
         
         Jak chcę teraz zmienić nazwy propsów np z color na colorHeader i colorContent to ręcznie musze wszystko zmienić w każdym komponencie?
+
+        Czy mogę funkcją wbudowaną z poziomu App.js zmieniać state w componencie np. "Component.setState" 
+
+        nie mogłem przekazać w ogóle funkcji delete do propsa bez zamiany App na klasowy więcprzeniosłem do Comment'a
         
         */}
 
@@ -44,5 +49,7 @@ function App() {
     </div >
   );
 }
+
+
 
 export default App;
