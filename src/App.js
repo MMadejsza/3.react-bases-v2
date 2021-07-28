@@ -3,6 +3,10 @@ import './App.css';
 import Comment from './Components/Comment.js';
 
 function App() {
+  function randomPic() {
+    return
+  }
+
   return (
     <div>
       <h1>Today's voice:</h1>
@@ -39,7 +43,7 @@ function App() {
           headerJustify={"right"}
           contentJustify={"left"} />
         <Comment
-          pic={"https://www.usedairsoft.co.uk/oc-content/uploads/264/57119.jpg"}
+          pic={this.randomPic}
           color={""}
           fontSize={""}
           fontWeight={""}
