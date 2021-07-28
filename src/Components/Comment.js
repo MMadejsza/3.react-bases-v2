@@ -22,9 +22,13 @@ class Comment extends Component {
         this.props.deleted()
     }
 
+    componentDidUpdate() {
+        this.setState({
+            deleted: this.props.hidden
+        })
+    }
+
     render() {
-        console.log("du")
-        console.log(this.state.deleted)
         if (!this.state.deleted) {
             return (
                 <div className="comment-box" onClick={this.deleteComment}>

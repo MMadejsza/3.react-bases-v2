@@ -21,8 +21,7 @@ class App extends Component {
     console.log('clicked');
     this.setState({
       hidden: !this.state.hidden,
-    }
-    )
+    })
   }
   render() {
     return (
@@ -39,7 +38,7 @@ class App extends Component {
             contentJustify={"right"}
             deleted={this.deleted}
             hidden={this.state.hidden} />
-          <Comment
+          {/* <Comment
             pic={"https://www.usedairsoft.co.uk/oc-content/uploads/264/57119.jpg"}
             color={"green"}
             fontSize={"14px"}
@@ -47,7 +46,7 @@ class App extends Component {
             headerJustify={"left"}
             contentJustify={"center"}
             deleted={this.deleted}
-            hidden={this.state.hidden2} />
+            hidden={this.state.hidden2} /> */}
           {/* <Comment
             pic={"https://www.usedairsoft.co.uk/oc-content/uploads/264/57119.jpg"}
             color={"magenta"}
